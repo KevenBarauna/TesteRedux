@@ -15,11 +15,15 @@ const Teste = (props) => {
         })
     };
 
+    const getData = () =>{
+        dispatch(TesteAction.getDadosGitHub())
+    }
+
     return (
         <div className='container'>
             <h2>Teste Redux</h2>
             <div className='container-btn'>
-                <button onClick={TesteAction.getDadosGitHub()} >Pegar dados do GitHub</button>
+                <button onClick={getData} >Pegar dados do GitHub</button>
                 <button onClick={mockarDados} >Pegar dados Mock</button>
             </div>
             <Tabela />
